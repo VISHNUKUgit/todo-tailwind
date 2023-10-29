@@ -43,13 +43,13 @@ function Display({ todos,setTodos,setInput,input,setEditMode,id,setId }) {
       {todos.map((todo,index) => (
           
           <li key={todo.id} className='flex justify-between  border-solid border-2 my-3 p-2 '>
-           <input className="font-semibold w-4/5" style={todo.completed ? { textDecoration: "line-through" } : {}} type="text" value={`${index+1}. ${todo.title}` } onChange={(e)=>e.preventDefault()} disabled />
+           <input className="font-semibold w-3/4 sm:w-4/5" style={todo.completed ? { textDecoration: "line-through" } : {}} type="text" value={`${index+1}. ${todo.title}` } onChange={(e)=>e.preventDefault()} disabled />
            <div>
             <button style={todo.completed ? { color: "green" } : {}} className='button-complete  cursor-pointer text-2xl ' onClick={()=>handleTask(todo.id,todo.completed)}>
             <i class="fa-regular fa-square-check "></i>
             </button>
            
-            <button className='button-edit task-button cursor-pointer cursor-pointer text-2xl mx-2' onClick={()=>handleEdit(index,todo.id)} >
+            <button className='button-edit task-button cursor-pointer cursor-pointer text-2xl mx-1' onClick={()=>handleEdit(index,todo.id)} >
             <i class="fa-solid fa-pen-to-square fa-sm"></i>
             </button>
            

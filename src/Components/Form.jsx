@@ -26,7 +26,7 @@ function Form({input,setInput,todos,setTodos,editMode,setEditMode,id}) {
   return (
     <div>
         <form onSubmit={submit} className='flex justify-between'>
-            <input type="text" placeholder='Enter a ToDo...' className='w-4/5 p-1 outline-none border-b-4 border-indigo-500 font-semibold' value={input}
+            <input type="text" placeholder='Enter a ToDo...' className='w-3/4 sm:w-4/5  p-1 outline-none border-b-4 border-indigo-500 font-semibold' value={input}
             required onChange={onInputchange}/>
             <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' type='submit'>Add</button>
         </form>
